@@ -1,0 +1,41 @@
+<button class="boutlog" routerLink="/">RETOUR</button>
+<!-- cest parti -->
+<div *ngIf="!roueHide">
+	<h1 class="banner" (click)="playAudio()">Clique sur le Fela du destin</h1>
+	<div class="ferris_wheel" (click)="setUser()">
+
+		<div class="buckets">
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+			<div><img class="beukette" src="../assets/fela.jpg" width="50" height="50"></div>
+		</div>
+	</div>
+
+</div>
+
+<!-- matching -->
+<div *ngIf="userr" class="checking" >
+	<div  class="badge" [ngStyle]="{background: 'url(../../assets/' + userr.ekonne + ')'}">{{userr.name}}</div>
+	<div  *ngIf="!userr.match" class="matchAll animation" (click)="onRandom()">
+		<div  class="err-mess" *ngIf="errMess">{{errMess}}</div>
+		<div class="button">
+			<div class="text">Match</div>
+			<div *ngIf="!anim" class="shaft">
+				<div class="circular lid"></div>
+				<div class="circular base"></div>
+			</div>
+		</div>
+
+	</div>
+	<div  *ngIf="userr.match" class="matchAlle">
+		<div  class="matchAll" >Tu es tombé sur : <span class="gra">{{userr.match}}</span></div>
+		<div  class="matchAll" *ngIf="!userr.ss">personne ne t'as encore matché</div>
+		<div  class="matchAll" *ngIf="userr.ss">quelqu'un t'a matché</div>
+	</div>
+</div>
+

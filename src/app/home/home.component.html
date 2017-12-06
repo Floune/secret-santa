@@ -1,0 +1,34 @@
+<div class="contIni">
+	<form  class="container">
+
+		<div class="title">
+			<h1>LOGIN</h1>
+		</div>
+
+		<div class="psi">
+			<input #name placeholder="pseudo"><br>
+		</div>
+
+		<div class="mp">
+			<input #pw placeholder="mdp"><br>
+		</div>
+
+		<div class="send">
+			<button type="submit" class="boutlog" (click)="checkLog(name.value, pw.value)">"Match Ton Gitan"</button>
+		</div>
+
+		<div *ngIf="ermes" class="ermes">{{ermes}}</div>
+
+	</form>
+
+	<div class="lst">
+		<div class="ttlst"><h2>liste exhaustive des pseudos / launchpad </h2></div>
+		<div class="lcont">
+			<div class="" *ngFor="let user of users">
+			<app-balaudio [user]="user"></app-balaudio>
+			</div>
+		</div>
+	</div>
+</div>
+	
+

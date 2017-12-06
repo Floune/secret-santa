@@ -1,0 +1,39 @@
+@media screen and (max-width: 700px){
+	.card {
+		text-align: center;
+		align-content: center;
+		vertical-align: middle;
+		border: solid 2px red;
+		line-height: 1.5em;
+		width: 4em;
+		height: 1.5em;
+		/*border-collapse: collapse;*/
+		background-color: green;
+		font-size: 25px;
+	}
+	
+	.card:hover {
+		background-color: yellow;
+	}
+
+}
+
+@media screen and (min-width: 701px){
+
+	.card {
+		text-align: center;
+		vertical-align: middle;
+		align-content: center;
+		line-height: 3em;
+		border: solid 2px red;
+		width: 7em;
+		height: 3em;
+		border-collapse: collapse;
+		background-color: green;
+		font-size: 35px;
+	}
+
+	.card:hover {
+		background-color: yellow;
+	}
+}
