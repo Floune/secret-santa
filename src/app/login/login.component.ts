@@ -26,10 +26,12 @@ export class LoginComponent implements OnInit {
 	checkReceveur = false;
 	errMess = '';
 	private sub: any;
-	anim = false;
+	grab = 0;
+
 	// Create an instance of the DataService through dependency injection
 	constructor(private _dataService: DataService,
-		private route: ActivatedRoute) {
+		private route: ActivatedRoute,
+		private router: Router) {
 
 	    // Access the Data Service's getUsers() method we defined
 	    this._dataService.getUsers()
@@ -39,11 +41,17 @@ export class LoginComponent implements OnInit {
 
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
-			this.name = params['name'] ; 
+			this.name = params['name'];
 		});
 	}
 
 	playAudio(){
+		this.grab += 1;
+		if (this.grab >= 5)
+		{
+			this.grab = 0;
+			this.router.navigate(['/graba']);
+		}
 		let audio = new Audio();
 		audio.src = "../assets/pet.wav";
 		audio.load();

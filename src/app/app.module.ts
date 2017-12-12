@@ -10,7 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { BalaudioComponent } from './balaudio/balaudio.component';
-import { JouesonDirective } from './joueson.directive';  
+import { JouesonDirective } from './joueson.directive';
+import { GrabaComponent } from './graba/graba.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { JouesonDirective } from './joueson.directive';
     HomeComponent,
     BalaudioComponent,
     JouesonDirective,
+    GrabaComponent,
   ],
   imports: [
     BrowserModule,
